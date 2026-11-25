@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <!-- ✅ OPTIMISATION SEO & ADSENSE -->
+  <meta name="description" content="PharmaLink Africa : Trouvez vos médicaments, comparez les prix et réservez en pharmacie en toute sécurité.">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="pharmacie, médicament, Afrique, santé, réservation, pharmacie de garde, PharmaLink">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="PharmaLink Africa">
+  
+  <!-- ✅ CORRECTION ICÔNES : Ajout de ?v=2 pour forcer le rafraîchissement du cache navigateur -->
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=2">
+  <link rel="icon" type="image/png" href="favicon.png?v=2"/>
+  <link rel="apple-touch-icon" sizes="192x192" href="icons/Icon-192.png?v=2">
+  <link rel="apple-touch-icon" sizes="512x512" href="icons/Icon-512.png?v=2">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png?v=2">
+
+  <!-- ✅ Titre optimisé pour le référencement -->
+  <title>PharmaLink Africa - Trouvez et réservez vos médicaments</title>
+  <link rel="manifest" href="manifest.json">
+
+  <!-- ✅ CODE ADSENSE (Obligatoire pour la validation et la monétisation) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9357316238747010" crossorigin="anonymous"></script>
+
+  <!-- ✅ CORRECTION CRUCIALE : Force la hauteur à 100% pour que le footer reste en bas sur le Web -->
+  <style>
+    html, body { 
+      margin: 0; 
+      padding: 0; 
+      height: 100%; 
+      width: 100%; 
+      overflow: hidden; 
+    }
+  </style>
+
+  <!-- ✅ Permissions microphone/caméra pour Agora -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("flutter_service_worker.js");
+      });
+    }
+    
+    // Demander permissions au chargement
+    window.addEventListener("load", async () => {
+      try {
+        await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+        console.log("✅ Permissions média accordées");
+      } catch (err) {
+        console.log("⚠️ Permissions média refusées:", err);
+      }
+    });
+  </script>
+</head>
+
+<!-- ✅ CORRECTION CRUCIALE : Applique les mêmes styles directement au body -->
+<body style="margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden;">
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
